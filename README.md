@@ -4,11 +4,6 @@ Step 1: Install the package
 Step 2: Add Reanimated's babel plugin
              Add react-native-reanimated/plugin plugin to your babel.config.js.
              module.exports = { 
-    presets: [
-      ... // don't add it here :)
-    ],
-    plugins: [
-      ...
-      'react-native-reanimated/plugin',
-    ],
+                               presets: [],
+         plugins: ['react-native-reanimated/plugin'],  // only add this line
   };
