@@ -3,7 +3,7 @@ Step 1: Install the package
            npm install react-native-reanimated
 Step 2: Add Reanimated's babel plugin
              Add react-native-reanimated/plugin plugin to your babel.config.js.
-             module.exports = {
+             module.exports = { 
     presets: [
       ... // don't add it here :)
     ],
