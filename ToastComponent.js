@@ -11,10 +11,18 @@ import {hp, wp} from '../Constant/Responsive';
 import {Colors} from '../Constant/Colors';
 import {FontSize, Fonts} from '../Constant/Fonts';
 import {LinkingURL} from './LinkingURL';
+import NavigationSevice from '../Navigation/NavigationSevice';
 
 export const ToastComponent = ({title, body}) => {
+  const HandleToastNotification = title => {
+    if (title === 'Reminders') {
+      NavigationSevice.navigate('MyEvents');
+    } else {
+      LinkingURL();
+    }
+  };
   return (
-    <TouchableWithoutFeedback onPress={() => LinkingURL()}>
+    <TouchableWithoutFeedback onPress={() => HandleToastNotification(title)}>
       <Animated.View
         entering={FadeInUp}
         exiting={FadeOutUp}
